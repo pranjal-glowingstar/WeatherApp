@@ -12,6 +12,6 @@ import com.apps.weatherapp.data.models.SearchModel
 @Composable
 fun CityListItem(item: SearchModel, onCityClick: (String) -> Unit){
     Row(modifier = Modifier.fillMaxSize().clickable{ onCityClick(item.Key!!) }) {
-        Text(text = item.Key ?: AppConstants.EMPTY)
+        Text(text = item.EnglishName ?: AppConstants.EMPTY)
     }
 }
