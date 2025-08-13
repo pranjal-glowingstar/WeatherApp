@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             WeatherAppTheme {
-                Scaffold(modifier = Modifier.Companion.fillMaxSize().safeDrawingPadding()) { _ ->
+                Scaffold(modifier = Modifier.fillMaxSize().safeDrawingPadding()) { _ ->
                     Navigation(viewModel)
                 }
             }

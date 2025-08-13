@@ -1,7 +1,7 @@
 package com.apps.weatherapp.di
 
 import com.apps.weatherapp.common.AppConstants
-import com.apps.weatherapp.data.IMainNetworkService
+import com.apps.weatherapp.data.IWeatherApi
 import com.apps.weatherapp.repository.IMainRepository
 import com.apps.weatherapp.repository.MainRepositoryImpl
 import dagger.Binds
@@ -25,8 +25,8 @@ class MainModule {
 
     @Provides
     @Singleton
-    fun providesNetworkImplementation(network: Retrofit): IMainNetworkService{
-        return network.create(IMainNetworkService::class.java)
+    fun providesNetworkImplementation(network: Retrofit): IWeatherApi{
+        return network.create(IWeatherApi::class.java)
     }
 }
 

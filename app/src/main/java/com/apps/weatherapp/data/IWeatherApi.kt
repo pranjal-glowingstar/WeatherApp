@@ -9,7 +9,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 import retrofit2.http.QueryMap
 
-interface IMainNetworkService {
+interface IWeatherApi {
 
     @GET("/locations/v1/cities/search")
     suspend fun getSearchBasedOnPrefix(@QueryMap options: Map<String, String>): Response<List<SearchModel>>
